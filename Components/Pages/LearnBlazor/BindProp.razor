@@ -5,6 +5,8 @@
 Name : @Product.Name <br/>
 Is Active : @Product.IsActive
 <br />
+Price :@Product.Price  <br/>
+Input Price:<input type="number"  @bind="@Product.Price"  @bind:event="oninput"/> 
 
 @code {
     Models.Product Product = new()
@@ -12,7 +14,7 @@ Is Active : @Product.IsActive
         Id=1,
         Name="Product 1",
         IsActive= true,
-        
+        Price=5
     };
 
 }
